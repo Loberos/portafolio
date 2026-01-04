@@ -1,0 +1,173 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "loading": "Loading...",
+    "noResults": "No results"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "home": {
+    "greeting": "Hello! 👋",
+    "iam": "I'm",
+    "role": "Full Stack Developer",
+    "description": "Passionate about creating innovative technological solutions. Specialized in Angular, Spring Boot and modern architectures.",
+    "available": "Available",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "scroll": "Scroll down",
+    "techStack": "Technologies",
+    "stats": {
+      "projects": "Projects",
+      "experience": "Years of experience",
+      "technologies": "Technologies"
+    }
+  },
+  "about": {
+    "tag": "About",
+    "title": "About Me",
+    "subtitle": "Software developer passionate about technology",
+    "role": "Full Stack Developer",
+    "bio": "Software developer with experience in full-stack web development and technical support, currently studying Software Engineering at UPC. I combine solid technical skills with a strong ability to learn and work in teams.",
+    "whatIDo": "What I Do",
+    "languages": "Languages",
+    "services": {
+      "frontend": { "title": "Frontend", "desc": "Modern interfaces with Angular" },
+      "backend": { "title": "Backend", "desc": "APIs with Spring Boot and NestJS" },
+      "database": { "title": "Database", "desc": "MySQL, PostgreSQL, MongoDB" },
+      "support": { "title": "Tech Support", "desc": "Equipment maintenance" }
+    },
+    "lang": {
+      "spanish": "Spanish",
+      "english": "English",
+      "native": "Native",
+      "basic": "Basic Level"
+    }
+  },
+  "projects": {
+    "tag": "Portfolio",
+    "title": "My Projects",
+    "subtitle": "Academic and professional projects",
+    "role": "Role",
+    "achievements": "Achievements",
+    "categories": {
+      "university": "University",
+      "internship": "Professional Experience"
+    },
+    "types": {
+      "web": "Web App",
+      "mobile": "Mobile App",
+      "iot": "IoT & AI",
+      "enterprise": "Enterprise"
+    },
+    "tomateRitmo": {
+      "desc": "IoT system to automate and optimize tomato crop care. Integrates humidity/temperature sensors, AI-powered computer vision to detect leaf anomalies, and smart automatic irrigation.",
+      "role": "Frontend development and real-time alerts system"
+    },
+    "hairyPaws": {
+      "desc": "Comprehensive platform for pet adoption and NGO donations. Connects pets with adoptive families easily and securely.",
+      "role": "Full web application development"
+    },
+    "finApp": {
+      "desc": "Current account and credit management system for small businesses and commercial establishments.",
+      "role": "Frontend design and development with API integration"
+    },
+    "studentSystem": {
+      "desc": "Comprehensive student management system for I.E. Pública N.° 3082 'Paraíso Florido', benefiting elementary and secondary students.",
+      "role": "Full system development and implementation",
+      "achievement1": "Designed and implemented a student management system with Angular, Spring Boot and PostgreSQL",
+      "achievement2": "Developed an attendance control module with QR code reading and manual registration",
+      "achievement3": "Designed backend architecture following Domain-Driven Design (DDD) with 6 bounded contexts",
+      "achievement4": "Implemented bulk student import functionality from Excel files"
+    },
+    "docSystem": {
+      "desc": "Comprehensive document management system that improves accessibility to legal documents for the entire municipal organization.",
+      "role": "Full system development and implementation",
+      "achievement1": "Improved document accessibility for +100 users",
+      "achievement2": "Reduced document search time by 60%",
+      "achievement3": "Implemented user permissions and roles system"
+    }
+  },
+  "skills": {
+    "tag": "Skills",
+    "title": "Technical Skills",
+    "subtitle": "Technologies and tools I master",
+    "branches": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "devops": "DevOps"
+    },
+    "tools": "Tools",
+    "methodologies": "Methodologies & Architectures"
+  },
+  "education": {
+    "tag": "Journey",
+    "title": "Education & Experience",
+    "subtitle": "My academic and professional path",
+    "types": {
+      "education": "Education",
+      "experience": "Experience"
+    },
+    "upc": {
+      "desc": "Software development and agile methodologies training."
+    },
+    "lazarus": {
+      "achievement1": "Designed and implemented a student management system for I.E. Pública N.° 3082 'Paraíso Florido'",
+      "achievement2": "Developed an attendance control module with QR code reading",
+      "achievement3": "Designed backend architecture following Domain-Driven Design (DDD) with 6 bounded contexts",
+      "achievement4": "Implemented bulk student import functionality from CSV files"
+    },
+    "muni": {
+      "achievement1": "Developed a web application for document management using Angular, NestJS and MySQL",
+      "achievement2": "Provided technical support handling more than 30 incidents across multiple departments",
+      "achievement3": "Optimized internal processes through technological solutions implementation",
+      "achievement4": "Collaborated in team for identification and resolution of technical problems"
+    }
+  },
+  "contact": {
+    "tag": "Let's Talk",
+    "title": "Contact",
+    "subtitle": "Have a project? Let's chat!",
+    "info": "Contact Information",
+    "phone": "Phone",
+    "location": "Location",
+    "social": "Social Media",
+    "sendMessage": "Send Message",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What do you want to talk about?",
+      "message": "Message",
+      "messagePlaceholder": "Write your message...",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "tagline": "Full Stack Developer passionate about creating innovative technological solutions and memorable digital experiences.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with"
+  },
+  "primeng": {
+    "accept": "Accept",
+    "reject": "Reject",
+    "choose": "Choose",
+    "upload": "Upload",
+    "cancel": "Cancel"
+  }
+}

@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {PrimeImportsModule} from './primeng/config/primeng.imports';
+import {Navbar} from './profile/components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [PrimeImportsModule, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,333 @@
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--branch-color, #f43f5e);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--branch-color, #f43f5e), 0 0 30px var(--branch-color, #f43f5e);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+:host ::ng-deep .animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.skills-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0.5rem 0;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.skill-tree-section {
+  margin-bottom: 3rem;
+}
+
+.skill-branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-branch {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.skill-branch:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--branch-color);
+}
+
+.skill-branch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--branch-color);
+}
+
+.branch-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.branch-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.branch-info {
+  flex: 1;
+}
+
+.branch-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.25rem;
+}
+
+.branch-progress {
+  font-size: 0.85rem;
+  color: var(--branch-color);
+  font-weight: 600;
+}
+
+.skill-nodes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-node {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: default;
+}
+
+.skill-node.unlocked {
+  background: linear-gradient(135deg,
+  color-mix(in srgb, var(--branch-color) 15%, white),
+  color-mix(in srgb, var(--branch-color) 8%, white)
+  );
+  color: var(--branch-color);
+  border: 1px solid color-mix(in srgb, var(--branch-color) 30%, white);
+}
+
+.skill-node.unlocked:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--branch-color) 30%, transparent);
+}
+
+.skill-node.locked {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border: 1px solid #e5e7eb;
+  opacity: 0.6;
+}
+
+.node-icon {
+  font-size: 0.9rem;
+}
+
+.node-name {
+  white-space: nowrap;
+}
+
+.lock-icon {
+  font-size: 0.7rem;
+  margin-left: 0.25rem;
+}
+
+.branch-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  transform: translateX(-50%);
+  opacity: 0.3;
+  display: none;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title i {
+  color: #f43f5e;
+}
+
+.tools-section {
+  margin-bottom: 2.5rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.1);
+  border-color: #fda4af;
+}
+
+.tool-card i {
+  font-size: 1.5rem;
+  color: #f43f5e;
+}
+
+.tool-card span {
+  font-weight: 500;
+  color: #4b5563;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.methodologies-section {
+  margin-bottom: 2rem;
+}
+
+.methodology-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.method-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+  border: 1px solid #fecdd3;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #be123c;
+  transition: all 0.3s ease;
+}
+
+.method-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.15);
+}
+
+.method-chip i {
+  font-size: 0.8rem;
+}
+
+:host-context(.my-app-dark) .page-title,
+:host-context(.my-app-dark) .section-title,
+:host-context(.my-app-dark) .branch-name {
+  color: #f4f4f5;
+}
+
+:host-context(.my-app-dark) .page-subtitle {
+  color: #a1a1aa;
+}
+
+:host-context(.my-app-dark) .skill-branch,
+:host-context(.my-app-dark) .tool-card {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+:host-context(.my-app-dark) .skill-node.unlocked {
+  background: linear-gradient(135deg,
+  color-mix(in srgb, var(--branch-color) 20%, #27272a),
+  color-mix(in srgb, var(--branch-color) 10%, #27272a)
+  );
+  border-color: color-mix(in srgb, var(--branch-color) 40%, #27272a);
+}
+
+:host-context(.my-app-dark) .skill-node.locked {
+  background: #1f1f23;
+  border-color: #3f3f46;
+  color: #71717a;
+}
+
+:host-context(.my-app-dark) .tool-card span {
+  color: #d4d4d8;
+}
+
+:host-context(.my-app-dark) .method-chip {
+  background: rgba(244, 63, 94, 0.15);
+  border-color: rgba(244, 63, 94, 0.3);
+  color: #fb7185;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .skill-branches {
+    grid-template-columns: 1fr;
+  }
+}

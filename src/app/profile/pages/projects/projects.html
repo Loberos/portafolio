@@ -1,0 +1,165 @@
+<div class="projects-container">
+  <section class="projects-header" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <p-tag [value]="'projects.tag' | translate" severity="danger"></p-tag>
+    <h2 class="page-title">{{ 'projects.title' | translate }}</h2>
+    <p class="page-subtitle">{{ 'projects.subtitle' | translate }}</p>
+  </section>
+
+  <div class="filter-buttons" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <button
+      class="filter-btn"
+      [class.active]="activeTab() === 'university'"
+      (click)="setActiveTab('university')">
+      <i class="pi pi-graduation-cap"></i>
+      <span>{{ 'projects.categories.university' | translate }}</span>
+    </button>
+    <button
+      class="filter-btn"
+      [class.active]="activeTab() === 'internship'"
+      (click)="setActiveTab('internship')">
+      <i class="pi pi-briefcase"></i>
+      <span>{{ 'projects.categories.internship' | translate }}</span>
+    </button>
+  </div>
+
+  @if (activeTab() === 'university') {
+    <div class="projects-carousel-container" pAnimateOnScroll enterClass="animate-fade-in-up">
+      <p-carousel
+        [value]="universityProjects()"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        [autoplayInterval]="6000"
+        [showNavigators]="false"
+        [showIndicators]="true"
+        [responsiveOptions]="carouselResponsiveOptions"
+        class="projects-carousel"
+      >
+        <ng-template #item let-project>
+          <div class="project-card-wrapper">
+            <div class="project-card">
+              <div class="project-carousel">
+                <p-carousel
+                  [value]="project.images"
+                  [numVisible]="1"
+                  [numScroll]="1"
+                  [circular]="true"
+                  [autoplayInterval]="4000"
+                  [showNavigators]="false"
+                  [showIndicators]="false"
+                  class="image-carousel"
+                >
+                  <ng-template #item let-image>
+                    <div class="carousel-image-container">
+                      <img [src]="image" [alt]="project.title" class="carousel-image" />
+                    </div>
+                  </ng-template>
+                </p-carousel>
+              </div>
+
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">{{ project.title }}</h3>
+                  <p-tag [value]="project.type | translate" [severity]="project.severity"></p-tag>
+                </div>
+
+                <p class="project-desc">{{ project.description | translate }}</p>
+
+                <div class="project-role">
+                  <i class="pi pi-user"></i>
+                  <span>{{ project.role | translate }}</span>
+                </div>
+
+                <div class="project-tech">
+                  @for (tech of project.technologies; track tech) {
+                    <p-chip [label]="tech" class="tech-chip"></p-chip>
+                  }
+                </div>
+
+                <div class="project-actions">
+                  @if (project.github) {
+                    <a [href]="project.github" target="_blank" class="action-btn" pTooltip="GitHub">
+                      <i class="pi pi-github"></i>
+                    </a>
+                  }
+                  @if (project.demo) {
+                    <a [href]="project.demo" target="_blank" class="action-btn primary" pTooltip="Demo">
+                      <i class="pi pi-external-link"></i>
+                    </a>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  }
+
+  @if (activeTab() === 'internship') {
+    <div class="projects-list">
+      @for (project of internshipProjects(); track project.title; let i = $index) {
+        <div
+          class="project-card"
+          pAnimateOnScroll
+          enterClass="animate-fade-in-up"
+          [style.animation-delay.ms]="i * 150">
+          <div class="project-carousel">
+            <p-carousel
+              [value]="project.images"
+              [numVisible]="1"
+              [numScroll]="1"
+              [circular]="true"
+              [autoplayInterval]="4000"
+              [showNavigators]="false"
+              [showIndicators]="project.images.length > 1"
+              class="image-carousel"
+            >
+              <ng-template #item let-image>
+                <div class="carousel-image-container">
+                  <img [src]="image" [alt]="project.title" class="carousel-image" />
+                </div>
+              </ng-template>
+            </p-carousel>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <p-tag [value]="project.type | translate" severity="info"></p-tag>
+            </div>
+
+            <div class="project-company">
+              <i class="pi pi-building"></i>
+              <span>{{ project.company }}</span>
+            </div>
+
+            <p class="project-desc">{{ project.description | translate }}</p>
+
+            <div class="project-role">
+              <i class="pi pi-user"></i>
+              <span>{{ project.role | translate }}</span>
+            </div>
+
+            <div class="project-tech">
+              @for (tech of project.technologies; track tech) {
+                <p-chip [label]="tech" class="tech-chip"></p-chip>
+              }
+            </div>
+
+            @if (project.achievements && project.achievements.length > 0) {
+              <div class="project-achievements">
+                <h4>{{ 'projects.achievements' | translate }}</h4>
+                <ul>
+                  @for (achievement of project.achievements; track achievement) {
+                    <li>{{ achievement | translate }}</li>
+                  }
+                </ul>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

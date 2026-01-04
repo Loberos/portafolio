@@ -1,0 +1,115 @@
+<div class="contact-container">
+  <section class="contact-header">
+    <p-tag [value]="'contact.tag' | translate" severity="danger"></p-tag>
+    <h1 class="page-title">{{ 'contact.title' | translate }}</h1>
+    <p class="page-subtitle">{{ 'contact.subtitle' | translate }}</p>
+  </section>
+
+  <div class="contact-content">
+    <section class="contact-info">
+      <h2 class="section-title">{{ 'contact.info' | translate }}</h2>
+
+      <div class="info-cards">
+        <a href="mailto:rengiforandy11@gmail.com" class="info-card">
+          <div class="info-icon">
+            <i class="pi pi-envelope"></i>
+          </div>
+          <div class="info-content">
+            <span class="info-label">Email</span>
+            <span class="info-value">rengiforandy11&#64;gmail.com</span>
+          </div>
+        </a>
+
+        <a href="tel:+51941116245" class="info-card">
+          <div class="info-icon">
+            <i class="pi pi-phone"></i>
+          </div>
+          <div class="info-content">
+            <span class="info-label">{{ 'contact.phone' | translate }}</span>
+            <span class="info-value">+51 941 116 245</span>
+          </div>
+        </a>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="pi pi-map-marker"></i>
+          </div>
+          <div class="info-content">
+            <span class="info-label">{{ 'contact.location' | translate }}</span>
+            <span class="info-value">Lima, Perú</span>
+          </div>
+        </div>
+      </div>
+      <h2 class="section-title social-title">{{ 'contact.social' | translate }}</h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/randy-becker-rengifo-mirabal" target="_blank" class="social-btn linkedin">
+          <i class="pi pi-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Loberos?tab=repositories" target="_blank" class="social-btn github">
+          <i class="pi pi-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <h2 class="section-title">{{ 'contact.sendMessage' | translate }}</h2>
+      <form class="contact-form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">{{ 'contact.form.name' | translate }}</label>
+          <input
+            pInputText
+            id="name"
+            [(ngModel)]="formData.name"
+            name="name"
+            [placeholder]="'contact.form.namePlaceholder' | translate"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">{{ 'contact.form.email' | translate }}</label>
+          <input
+            pInputText
+            id="email"
+            type="email"
+            [(ngModel)]="formData.email"
+            name="email"
+            [placeholder]="'contact.form.emailPlaceholder' | translate"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">{{ 'contact.form.subject' | translate }}</label>
+          <input
+            pInputText
+            id="subject"
+            [(ngModel)]="formData.subject"
+            name="subject"
+            [placeholder]="'contact.form.subjectPlaceholder' | translate"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">{{ 'contact.form.message' | translate }}</label>
+          <textarea
+            pTextarea
+            id="message"
+            [(ngModel)]="formData.message"
+            name="message"
+            rows="5"
+            [placeholder]="'contact.form.messagePlaceholder' | translate"
+          ></textarea>
+        </div>
+
+        <button
+          pButton
+          type="submit"
+          [label]="'contact.form.send' | translate"
+          icon="pi pi-send"
+          class="submit-btn"
+        ></button>
+      </form>
+    </section>
+  </div>
+</div>

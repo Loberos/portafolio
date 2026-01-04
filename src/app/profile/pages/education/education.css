@@ -1,0 +1,270 @@
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:host ::ng-deep .animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.education-container {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0.5rem 0;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.timeline-section {
+  padding: 1rem 0;
+}
+
+.timeline-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-card.experience {
+  border-left: 4px solid #22c55e;
+}
+
+.timeline-card:not(.experience) {
+  border-left: 4px solid #3b82f6;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem;
+}
+
+.card-institution {
+  font-weight: 600;
+  color: #f43f5e;
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.card-location {
+  color: #6b7280;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.card-description {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.achievements-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.achievements-list li {
+  margin-bottom: 0.25rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #374151;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.timeline-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.timeline-marker.experience {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+:host-context(.my-app-dark) .page-title,
+:host-context(.my-app-dark) .card-title {
+  color: #f4f4f5;
+}
+
+:host-context(.my-app-dark) .page-subtitle,
+:host-context(.my-app-dark) .card-description,
+:host-context(.my-app-dark) .achievements-list,
+:host-context(.my-app-dark) .card-location {
+  color: #a1a1aa;
+}
+
+:host-context(.my-app-dark) .timeline-card {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+:host-context(.my-app-dark) .card-date {
+  color: #71717a;
+}
+
+:host-context(.my-app-dark) .tech-tags {
+  border-top-color: #3f3f46;
+}
+
+:host-context(.my-app-dark) .tech-tag {
+  background: linear-gradient(135deg, #3f3f46, #52525b);
+  color: #d4d4d8;
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    padding: 3rem 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .timeline-card {
+    max-width: 100%;
+  }
+
+  :host ::ng-deep .p-timeline.p-timeline-alternate .p-timeline-event {
+    flex-direction: row !important;
+  }
+
+  :host ::ng-deep .p-timeline.p-timeline-alternate .p-timeline-event-opposite {
+    display: none !important;
+  }
+
+  :host ::ng-deep .p-timeline.p-timeline-alternate .p-timeline-event-content {
+    text-align: left !important;
+    padding-left: 1rem !important;
+    padding-right: 0 !important;
+  }
+
+  :host ::ng-deep .p-timeline-event-separator {
+    flex-shrink: 0;
+  }
+
+  .timeline-marker {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-institution {
+    font-size: 0.9rem;
+  }
+
+  .card-location {
+    font-size: 0.8rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+
+  .achievements-list {
+    font-size: 0.8rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-container {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

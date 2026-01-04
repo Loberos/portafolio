@@ -1,0 +1,33 @@
+<div class="landing-container">
+  <section #heroSection data-section="hero" class="section" id="hero">
+    <app-home></app-home>
+  </section>
+
+  <section #aboutSection data-section="about" class="section" id="about">
+    <app-about></app-about>
+  </section>
+
+  <section #projectsSection data-section="projects" class="section" id="projects">
+    <app-projects></app-projects>
+  </section>
+
+  <section #skillsSection data-section="skills" class="section" id="skills">
+    <app-skills></app-skills>
+  </section>
+
+  <section #educationSection data-section="education" class="section" id="education">
+    <app-education></app-education>
+  </section>
+
+  <section #contactSection data-section="contact" class="section" id="contact">
+    <app-contact></app-contact>
+  </section>
+
+  <app-footer></app-footer>
+
+  <p-scroll-top
+    [threshold]="400"
+    icon="pi pi-arrow-up"
+    styleClass="scroll-top-btn">
+  </p-scroll-top>
+</div>

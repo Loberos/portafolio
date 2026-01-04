@@ -1,0 +1,54 @@
+<div class="education-container">
+  <section class="education-header" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <p-tag [value]="'education.tag' | translate" severity="danger"></p-tag>
+    <h2 class="page-title">{{ 'education.title' | translate }}</h2>
+    <p class="page-subtitle">{{ 'education.subtitle' | translate }}</p>
+  </section>
+
+  <section class="timeline-section" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <p-timeline [value]="timeline()" align="alternate" class="custom-timeline">
+      <ng-template #content let-item>
+        <div class="timeline-card" [class.experience]="item.type === 'experience'">
+          <div class="card-header">
+            <p-tag
+              [value]="item.type === 'education' ? ('education.types.education' | translate) : ('education.types.experience' | translate)"
+              [severity]="item.type === 'education' ? 'info' : 'success'"
+            ></p-tag>
+            <span class="card-date">{{ item.date }}</span>
+          </div>
+          <h3 class="card-title">{{ item.title }}</h3>
+          <p class="card-institution">{{ item.institution }}</p>
+          <p class="card-location">
+            <i class="pi pi-map-marker"></i>
+            {{ item.location }}
+          </p>
+
+          @if (item.description) {
+            <p class="card-description">{{ item.description | translate }}</p>
+          }
+
+          @if (item.achievements && item.achievements.length > 0) {
+            <ul class="achievements-list">
+              @for (achievement of item.achievements; track achievement) {
+                <li>{{ achievement | translate }}</li>
+              }
+            </ul>
+          }
+
+          @if (item.technologies && item.technologies.length > 0) {
+            <div class="tech-tags">
+              @for (tech of item.technologies; track tech) {
+                <span class="tech-tag">{{ tech }} {{ "" }}</span>
+              }
+            </div>
+          }
+        </div>
+      </ng-template>
+      <ng-template #marker let-item>
+        <div class="timeline-marker" [class.experience]="item.type === 'experience'">
+          <i [class]="item.type === 'education' ? 'pi pi-graduation-cap' : 'pi pi-briefcase'"></i>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </section>
+</div>

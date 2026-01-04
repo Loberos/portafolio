@@ -1,0 +1,124 @@
+<div class="hero-container">
+  <div class="hero-section">
+    <div class="hero-content" pAnimateOnScroll enterClass="animate-fade-in-up" leaveClass="animate-fade-out">
+      <div class="hero-decoration">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+      </div>
+
+      <div class="profile-image-wrapper">
+        <div class="profile-glow"></div>
+        <img
+          src="https://i.postimg.cc/C5j0WzVr/me.jpg"
+          alt="Randy Rengifo"
+          class="profile-image"
+        />
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span class="status-text">{{ 'home.available' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="greeting">{{ 'home.greeting' | translate }}</p>
+        <h1 class="hero-title">
+          {{ 'home.iam' | translate }} <span class="highlight">Randy Rengifo</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="typing-text">{{ 'home.role' | translate }}</span>
+        </p>
+        <p class="hero-description">
+          {{ 'home.description' | translate }}
+        </p>
+      </div>
+
+      <div class="hero-actions">
+        <button
+          pButton
+          [label]="'home.viewProjects' | translate"
+          icon="pi pi-briefcase"
+          class="p-button-lg cta-primary"
+          (click)="scrollToSection('projects')"
+        ></button>
+        <button
+          pButton
+          [label]="'home.contactMe' | translate"
+          icon="pi pi-envelope"
+          class="p-button-lg p-button-outlined cta-secondary"
+          (click)="scrollToSection('contact')"
+        ></button>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/Loberos" target="_blank" class="social-link" pTooltip="GitHub" tooltipPosition="bottom">
+          <i class="pi pi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/randy-becker-rengifo-mirabal" target="_blank" class="social-link" pTooltip="LinkedIn" tooltipPosition="bottom">
+          <i class="pi pi-linkedin"></i>
+        </a>
+        <a href="mailto:rengiforandy11@gmail.com" class="social-link" pTooltip="Email" tooltipPosition="bottom">
+          <i class="pi pi-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" (click)="scrollToSection('about')">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>{{ 'home.scroll' | translate }}</span>
+    </div>
+  </div>
+
+  <div class="stats-section" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="pi pi-code"></i>
+        </div>
+        <div class="stat-content">
+          <span class="stat-number">{{ projectsCount() }}+</span>
+          <span class="stat-label">{{ 'home.stats.projects' | translate }}</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="pi pi-clock"></i>
+        </div>
+        <div class="stat-content">
+          <span class="stat-number">{{ experienceYears() }}+</span>
+          <span class="stat-label">{{ 'home.stats.experience' | translate }}</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="pi pi-star"></i>
+        </div>
+        <div class="stat-content">
+          <span class="stat-number">{{ technologiesCount() }}+</span>
+          <span class="stat-label">{{ 'home.stats.technologies' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tech-preview" pAnimateOnScroll enterClass="animate-fade-in">
+    <div class="tech-marquee">
+      <div class="tech-track">
+        @for (tech of technologies(); track tech.name) {
+          <div class="tech-item">
+            <i [class]="tech.icon"></i>
+            <span>{{ tech.name }}</span>
+          </div>
+        }
+        @for (tech of technologies(); track tech.name) {
+          <div class="tech-item">
+            <i [class]="tech.icon"></i>
+            <span>{{ tech.name }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

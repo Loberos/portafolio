@@ -1,59 +1,144 @@
-# PortafolioRandy
+<p align="center">
+  <img src="https://i.postimg.cc/x1pwpKzX/image.png" alt="Randy Rengifo Logo" width="80" height="80" style="border-radius: 50%;"/>
+</p>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+<h1 align="center">🚀 Randy Rengifo - Portfolio</h1>
 
-## Development server
+<p align="center">
+  <strong>Portafolio personal desarrollado con Angular 21, PrimeNG 21 y Tailwind CSS 4</strong>
+</p>
 
-To start a local development server, run:
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
+  <img src="https://img.shields.io/badge/PrimeNG-21-007AD9?style=for-the-badge&logo=prime&logoColor=white" alt="PrimeNG"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+</p>
 
-```bash
-ng serve
-```
+<p align="center">
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías">Tecnologías</a> •
+  <a href="#-estructura">Estructura</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-secciones">Secciones</a>
+</p>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🎯 Descripción
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Portafolio web personal diseñado como una **Single Page Application (SPA)** con navegación suave entre secciones, animaciones al scroll, soporte para **modo oscuro** e **internacionalización** (Español/Inglés). El diseño es completamente **responsive** y optimizado para todo tipo de dispositivos.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ✨ Características
 
-```bash
-ng generate --help
-```
+### 🎨 Diseño & UI
+- **Single Page Landing** con navegación por scroll suave
+- **Modo Oscuro/Claro** con toggle animado
+- **Diseño Responsive** optimizado para móvil, tablet y desktop
+- **Animaciones al Scroll** usando `pAnimateOnScroll` de PrimeNG
+- **Navbar Inteligente** que cambia al hacer scroll con menú móvil deslizante
 
-## Building
+### 🌐 Internacionalización
+- Soporte para **Español** e **Inglés**
+- Cambio de idioma en tiempo real
+- Traducciones completas en todas las secciones
 
-To build the project run:
+### 🛠 Funcionalidades
+- **Botón Descargar CV** en el navbar
+- **Carrusel de Proyectos** con navegación táctil
+- **Skill Tree Visual** con ramas de tecnologías
+- **Timeline de Experiencia** con diseño alternado
+- **Formulario de Contacto** integrado
+- **Footer** con enlaces sociales y navegación rápida
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🔧 Tecnologías
 
-## Running unit tests
+| Tecnología | Versión | Uso |
+|------------|---------|-----|
+| **Angular** | 21 | Framework principal |
+| **PrimeNG** | 21 | Componentes UI (Carousel, Timeline, Tags, etc.) |
+| **Tailwind CSS** | 4 | Utilidades de estilos |
+| **ngx-translate** | - | Internacionalización |
+| **TypeScript** | 5.x | Lenguaje de programación |
+| **PrimeIcons** | - | Iconografía |
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 📑 Secciones
 
-## Running end-to-end tests
+### 🏠 Hero Section
+- Presentación con nombre y rol
+- Estadísticas animadas (proyectos, experiencia, tecnologías)
+- Botones de acción (Ver Proyectos, Contacto)
+- Indicador de disponibilidad
 
-For end-to-end (e2e) testing, run:
+### 👤 About Section
+- Descripción profesional
+- Grid de servicios (Frontend, Backend, Database, Soporte)
+- Indicador de idiomas
 
-```bash
-ng e2e
-```
+### 💼 Projects Section
+- **Filtros**: Universidad / Experiencia Profesional
+- **Carrusel de proyectos** (1 a la vez en móvil)
+- Cards con imagen grande, descripción, tecnologías y links
+- Sección de logros para proyectos profesionales
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+#### Proyectos Destacados:
+| Proyecto | Tipo | Tecnologías |
+|----------|------|-------------|
+| TomateRitmo | IoT & IA | Angular, Spring Boot, Python, TensorFlow |
+| Hairy-Paws | App Web | Angular, NestJS, MySQL |
+| FinApp | App Web | Angular, Spring Boot, JWT |
+| Sistema de Gestión Estudiantil | Empresarial | Angular, Spring Boot, PostgreSQL, DDD |
+| Sistema de Gestión Documental | Empresarial | Angular, NestJS, MySQL, Docker |
 
-## Additional Resources
+### 🌳 Skills Section
+- **Skill Tree Visual** con 4 ramas:
+  - 🔴 Frontend (HTML5, CSS3, JavaScript, TypeScript, Angular, PrimeNG, Tailwind)
+  - 🟢 Backend (Java, Spring Boot, Node.js, NestJS, REST APIs, JWT Auth)
+  - 🔵 Database (SQL, MySQL, PostgreSQL, MongoDB, TypeORM)
+  - 🟡 DevOps (Git, GitHub, Docker, CI/CD)
+- Grid de herramientas
+- Chips de metodologías (DDD, SOLID, Clean Architecture, Scrum)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 🎓 Education Section
+- Timeline alternado (vertical en móvil)
+- Formación académica (UPC - Ingeniería de Software)
+- Experiencia profesional con logros detallados
+
+### 📬 Contact Section
+- Información de contacto (email, teléfono, ubicación)
+- Links a redes sociales (GitHub, LinkedIn)
+- Formulario de contacto
+
+### 🔗 Footer
+- Logo y tagline
+- Enlaces rápidos a secciones
+- Información de contacto
+- Copyright dinámico
+
+---
+
+
+## 📄 Licencia
+
+Este proyecto es de uso personal. Siéntete libre de usarlo como inspiración para tu propio portafolio.
+
+---
+
+<p align="center">
+  <strong>Desarrollado con ❤️ por Randy Rengifo</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Memory-RR">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="https://linkedin.com/in/tu-linkedin">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</p>

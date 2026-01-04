@@ -1,0 +1,140 @@
+<div class="layout-container">
+  <nav
+    class="navbar"
+    [class.scrolled]="isScrolled()">
+    <div class="navbar-content">
+      <div class="navbar-brand" (click)="scrollToSection(0)">
+        <img
+          src="https://i.postimg.cc/x1pwpKzX/image.png"
+          class="brand-logo"
+          alt="Logo"/>
+        <span class="brand-name">Randy Rengifo</span>
+      </div>
+
+      <div class="navbar-menu desktop-menu">
+        <div class="menu-items">
+          @for (item of menuItems(); track item.label; let i = $index) {
+            <a
+              class="menu-item"
+              [class.active]="activeItem() === i"
+              (click)="scrollToSection(i)"
+            >
+              <i [class]="'menu-icon ' + item.icon"></i>
+              <span class="menu-label">{{ item.label | translate }}</span>
+            </a>
+          }
+        </div>
+
+        <div class="navbar-actions">
+          <a
+            href="/assets/cv/Randy_Rengifo_CV.pdf"
+            target="_blank"
+            download
+            class="cv-download-btn">
+            <i class="pi pi-download"></i>
+            <span>{{ 'nav.downloadCV' | translate }}</span>
+          </a>
+
+          <div class="action-divider"></div>
+
+          <div class="language-switcher">
+            <button
+              pButton
+              type="button"
+              [label]="getCurrentFlag()"
+              class="p-button-text p-button-sm lang-btn"
+              (click)="switchLanguage(getOtherLanguage().code)"
+              [pTooltip]="getOtherLanguage().name"
+              tooltipPosition="bottom"
+            ></button>
+            <span class="lang-divider">|</span>
+            <span class="other-lang" (click)="switchLanguage(getOtherLanguage().code)">
+              {{ getOtherLanguage().flag }}
+            </span>
+          </div>
+
+          <div class="action-divider"></div>
+
+          <p-toggleswitch
+            [ngModel]="isDarkMode()"
+            (ngModelChange)="toggleDarkMode()">
+            <ng-template #handle let-checked="checked">
+              <i [ngClass]="['toggle-icon', 'pi', checked ? 'pi-moon' : 'pi-sun']"></i>
+            </ng-template>
+          </p-toggleswitch>
+        </div>
+      </div>
+
+      <button
+        class="mobile-toggle"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="isMobileMenuOpen()"
+        aria-label="Toggle menu"
+      >
+        <i [class]="isMobileMenuOpen() ? 'pi pi-times' : 'pi pi-bars'"></i>
+      </button>
+    </div>
+
+    <div
+      class="mobile-menu"
+      [class.open]="isMobileMenuOpen()">
+      <div class="mobile-menu-content">
+        @for (item of menuItems(); track item.label; let i = $index) {
+          <a
+            class="mobile-menu-item"
+            [class.active]="activeItem() === i"
+            (click)="scrollToSection(i); closeMobileMenu()"
+          >
+            <i [class]="'menu-icon ' + item.icon"></i>
+            <span class="menu-label">{{ item.label | translate }}</span>
+          </a>
+        }
+
+        <div class="mobile-actions">
+          <a
+            href="/assets/cv/Randy_Rengifo_CV.pdf"
+            target="_blank"
+            download
+            class="cv-download-btn mobile">
+            <i class="pi pi-download"></i>
+            <span>{{ 'nav.downloadCV' | translate }}</span>
+          </a>
+
+          <div class="action-divider"></div>
+
+          <div class="language-switcher">
+            <button
+              pButton
+              type="button"
+              [label]="getCurrentFlag()"
+              class="p-button-text p-button-sm lang-btn"
+              (click)="switchLanguage(getOtherLanguage().code)"
+            ></button>
+            <span class="lang-divider">|</span>
+            <span class="other-lang" (click)="switchLanguage(getOtherLanguage().code)">
+              {{ getOtherLanguage().flag }}
+            </span>
+          </div>
+
+          <div class="action-divider"></div>
+
+          <p-toggleswitch
+            [ngModel]="isDarkMode()"
+            (ngModelChange)="toggleDarkMode()">
+            <ng-template #handle let-checked="checked">
+              <i [ngClass]="['toggle-icon', 'pi', checked ? 'pi-moon' : 'pi-sun']"></i>
+            </ng-template>
+          </p-toggleswitch>
+        </div>
+      </div>
+    </div>
+
+    @if (isMobileMenuOpen()) {
+      <div class="mobile-overlay" (click)="closeMobileMenu()"></div>
+    }
+  </nav>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

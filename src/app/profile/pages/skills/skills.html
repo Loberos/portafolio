@@ -1,0 +1,89 @@
+<div class="skills-container">
+  <section class="skills-header" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <p-tag [value]="'skills.tag' | translate" severity="danger"></p-tag>
+    <h2 class="page-title">{{ 'skills.title' | translate }}</h2>
+    <p class="page-subtitle">{{ 'skills.subtitle' | translate }}</p>
+  </section>
+
+  <section class="skill-tree-section" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <div class="skill-branches">
+      @for (branch of skillBranches(); track branch.id; let i = $index) {
+        <div
+          class="skill-branch"
+          [style.--branch-color]="branch.color"
+          pAnimateOnScroll
+          enterClass="animate-fade-in-up"
+          [style.animation-delay.ms]="i * 100">
+
+          <div class="branch-header">
+            <div class="branch-icon" [style.background]="branch.color">
+              <i [class]="branch.icon"></i>
+            </div>
+            <div class="branch-info">
+              <h3 class="branch-name">{{ branch.name }}</h3>
+              <span class="branch-progress">
+                {{ getUnlockedCount(branch) }}/{{ getTotalCount(branch) }}
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-nodes">
+            @for (skill of branch.skills; track skill.id; let j = $index) {
+              <div
+                class="skill-node"
+                [class.unlocked]="skill.unlocked"
+                [class.locked]="!skill.unlocked"
+                [pTooltip]="skill.name"
+                tooltipPosition="top"
+                [style.animation-delay.ms]="j * 50">
+                <div class="node-icon">
+                  <i [class]="skill.icon"></i>
+                </div>
+                <span class="node-name">{{ skill.name }}</span>
+                @if (!skill.unlocked) {
+                  <i class="pi pi-lock lock-icon"></i>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="branch-line" [style.background]="'linear-gradient(to bottom, ' + branch.color + ', transparent)'"></div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="tools-section" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <h3 class="section-title">
+      <i class="pi pi-wrench"></i>
+      {{ 'skills.tools' | translate }}
+    </h3>
+    <div class="tools-grid">
+      @for (tool of tools(); track tool.name; let i = $index) {
+        <div
+          class="tool-card"
+          pAnimateOnScroll
+          enterClass="animate-fade-in-up"
+          [style.animation-delay.ms]="i * 50">
+          <i [class]="tool.icon"></i>
+          <span>{{ tool.name }}</span>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="methodologies-section" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <h3 class="section-title">
+      <i class="pi pi-sitemap"></i>
+      {{ 'skills.methodologies' | translate }}
+    </h3>
+    <div class="methodology-chips">
+      @for (method of methodologies(); track method; let i = $index) {
+        <div class="method-chip">
+          <i class="pi pi-check-circle"></i>
+          <span>{{ method }}</span>
+        </div>
+      }
+    </div>
+  </section>
+</div>

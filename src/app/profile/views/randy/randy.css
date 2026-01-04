@@ -1,0 +1,37 @@
+.landing-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section {
+  scroll-margin-top: 80px;
+}
+
+:host ::ng-deep .scroll-top-btn {
+  background: linear-gradient(135deg, #f43f5e, #e11d48) !important;
+  border: none !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(244, 63, 94, 0.35) !important;
+  transition: all 0.3s ease !important;
+}
+
+:host ::ng-deep .scroll-top-btn:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 12px 35px rgba(244, 63, 94, 0.45) !important;
+}
+
+:host ::ng-deep .scroll-top-btn .p-icon {
+  color: white !important;
+  font-size: 1.25rem !important;
+}
+
+.section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:host-context(.my-app-dark) ::ng-deep .scroll-top-btn {
+  box-shadow: 0 8px 25px rgba(244, 63, 94, 0.25) !important;
+}

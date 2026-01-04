@@ -1,0 +1,173 @@
+{
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "loading": "Cargando...",
+    "noResults": "Sin resultados"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Formación",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV"
+  },
+  "home": {
+    "greeting": "¡Hola! 👋",
+    "iam": "Soy",
+    "role": "Desarrollador Full Stack",
+    "description": "Apasionado por crear soluciones tecnológicas innovadoras. Especializado en Angular, Spring Boot y arquitecturas modernas.",
+    "available": "Disponible",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame",
+    "scroll": "Desliza hacia abajo",
+    "techStack": "Tecnologías",
+    "stats": {
+      "projects": "Proyectos",
+      "experience": "Años de experiencia",
+      "technologies": "Tecnologías"
+    }
+  },
+  "about": {
+    "tag": "Conóceme",
+    "title": "Sobre Mí",
+    "subtitle": "Desarrollador de software apasionado por la tecnología",
+    "role": "Desarrollador Full Stack",
+    "bio": "Desarrollador de software con experiencia en desarrollo web full-stack y soporte técnico, actualmente cursando Ingeniería de Software en la UPC. Combino habilidades técnicas sólidas con una fuerte capacidad de aprendizaje y trabajo en equipo.",
+    "whatIDo": "Lo que hago",
+    "languages": "Idiomas",
+    "services": {
+      "frontend": { "title": "Frontend", "desc": "Interfaces modernas con Angular" },
+      "backend": { "title": "Backend", "desc": "APIs con Spring Boot y NestJS" },
+      "database": { "title": "Base de Datos", "desc": "MySQL, PostgreSQL, MongoDB" },
+      "support": { "title": "Soporte Técnico", "desc": "Mantenimiento de equipos" }
+    },
+    "lang": {
+      "spanish": "Español",
+      "english": "Inglés",
+      "native": "Nativo",
+      "basic": "Nivel Básico"
+    }
+  },
+  "projects": {
+    "tag": "Portafolio",
+    "title": "Mis Proyectos",
+    "subtitle": "Proyectos académicos y profesionales",
+    "role": "Rol",
+    "achievements": "Logros",
+    "categories": {
+      "university": "Universidad",
+      "internship": "Experiencia Profesional"
+    },
+    "types": {
+      "web": "App Web",
+      "mobile": "App Móvil",
+      "iot": "IoT & IA",
+      "enterprise": "Empresarial"
+    },
+    "tomateRitmo": {
+      "desc": "Sistema IoT para automatizar y optimizar el cuidado de cultivos de tomate. Integra sensores de humedad/temperatura, visión artificial con IA para detectar anomalías en hojas, y riego automático inteligente.",
+      "role": "Desarrollo del frontend y sistema de alertas en tiempo real"
+    },
+    "hairyPaws": {
+      "desc": "Plataforma integral para la adopción de mascotas y donaciones a ONG. Conecta mascotas con familias adoptivas de manera fácil y segura.",
+      "role": "Desarrollo completo de la aplicación web"
+    },
+    "finApp": {
+      "desc": "Sistema de gestión de cuentas corrientes y créditos para pequeñas empresas y establecimientos comerciales.",
+      "role": "Diseño y desarrollo del frontend e integración con APIs"
+    },
+    "studentSystem": {
+      "desc": "Sistema integral de gestión estudiantil para la I.E. Pública N.° 3082 'Paraíso Florido', beneficiando a estudiantes de nivel primaria y secundaria.",
+      "role": "Desarrollo e implementación completa del sistema",
+      "achievement1": "Diseñé e implementé un sistema de gestión estudiantil con Angular, Spring Boot y PostgreSQL",
+      "achievement2": "Desarrollé un módulo de control de asistencia con lectura de códigos QR y registro manual",
+      "achievement3": "Diseñé la arquitectura del backend siguiendo Domain-Driven Design (DDD) con 6 bounded contexts",
+      "achievement4": "Implementé funcionalidades de importación masiva de estudiantes desde archivos Excel"
+    },
+    "docSystem": {
+      "desc": "Sistema integral de gestión documental que mejora la accesibilidad a documentos legales para toda la organización municipal.",
+      "role": "Desarrollo e implementación completa del sistema",
+      "achievement1": "Mejoré la accesibilidad a documentos legales para +100 usuarios",
+      "achievement2": "Reduje el tiempo de búsqueda de documentos en un 60%",
+      "achievement3": "Implementé sistema de permisos y roles de usuario"
+    }
+  },
+  "skills": {
+    "tag": "Competencias",
+    "title": "Habilidades Técnicas",
+    "subtitle": "Tecnologías y herramientas que domino",
+    "branches": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de Datos",
+      "devops": "DevOps"
+    },
+    "tools": "Herramientas",
+    "methodologies": "Metodologías & Arquitecturas"
+  },
+  "education": {
+    "tag": "Trayectoria",
+    "title": "Formación & Experiencia",
+    "subtitle": "Mi camino académico y profesional",
+    "types": {
+      "education": "Educación",
+      "experience": "Experiencia"
+    },
+    "upc": {
+      "desc": "Formación en desarrollo de software y metodologías ágiles."
+    },
+    "lazarus": {
+      "achievement1": "Diseñé e implementé un sistema de gestión estudiantil para la I.E. Pública N.° 3082 'Paraíso Florido'",
+      "achievement2": "Desarrollé un módulo de control de asistencia con lectura de códigos QR",
+      "achievement3": "Diseñé la arquitectura del backend siguiendo Domain-Driven Design (DDD) con 6 bounded contexts",
+      "achievement4": "Implementé funcionalidades de importación masiva de estudiantes desde archivos CSV"
+    },
+    "muni": {
+      "achievement1": "Desarrollé una aplicación web para gestión documental utilizando Angular, NestJS y MySQL",
+      "achievement2": "Proporcioné soporte técnico atendiendo más de 30 incidencias en múltiples departamentos",
+      "achievement3": "Optimicé procesos internos mediante la implementación de soluciones tecnológicas",
+      "achievement4": "Colaboré en equipo para la identificación y resolución de problemas técnicos"
+    }
+  },
+  "contact": {
+    "tag": "Hablemos",
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto? ¡Conversemos!",
+    "info": "Información de Contacto",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "social": "Redes Sociales",
+    "sendMessage": "Enviar Mensaje",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿De qué quieres hablar?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje...",
+      "send": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "tagline": "Desarrollador Full Stack apasionado por crear soluciones tecnológicas innovadoras y experiencias digitales memorables.",
+    "quickLinks": "Enlaces Rápidos",
+    "contactTitle": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con"
+  },
+  "primeng": {
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "choose": "Elegir",
+    "upload": "Subir",
+    "cancel": "Cancelar"
+  }
+}
