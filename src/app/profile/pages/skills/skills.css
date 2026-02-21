@@ -1,32 +1,3 @@
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px var(--branch-color, #f43f5e);
-  }
-  50% {
-    box-shadow: 0 0 20px var(--branch-color, #f43f5e), 0 0 30px var(--branch-color, #f43f5e);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
 :host ::ng-deep .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }
